@@ -20,8 +20,8 @@ def replacer(s, newstring, index, nofail=False):
 lst_fail = ['head',
             'body',
             'left arm',
-            'right arm', 'left leg',
-            'right leg, you loose']  # declare a the list of human parts that the user lost in case of wrong estatment
+            'right-arm', 'left-leg',
+            'right-leg, you loose']  # declare a the list of human parts that the user lost in case of wrong estatment
 
 
 dct = {"dudu": "long-hair",
