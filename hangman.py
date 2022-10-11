@@ -32,18 +32,18 @@ dct = {"dudu": "long-hair",
 cont_error = 0  # count of errors
 lst_hit = []  # declare a list that gonna be used the save the index of the corrent letters
 
-dct_choice = choice(list(dct.items()))
-word_choice = dct_choice[0]
-tip_choice = dct_choice[1]
+dct_choice = choice(list(dct.items()))  # randomic select one of the items from the dicionariy, after changes to list
+word_choice = dct_choice[0]  # the word selected to the game goint to be de index[0] of dct_choice
+tip_choice = dct_choice[1]  # the tip selected to the game goint to be de index[1] of dct_choice
 
 
-under_choice = (len(word_choice) * '_')
+underline_choice = (len(word_choice) * '_')  # uses the len of word choice and multioplies to underlines
 
 
-print('ESSE E JOGO DA FORCA BRO')
-for c in range(len(word_choice) + 6):
+print('hangman GAME dude')
+for c in range(len(word_choice) + 6):  # the sum of len and 6(maximum wrong attemps possible) is the max range possible
     lst_hit = []
-    print(under_choice)
+    print(underline_choice)
     print(f'tip: {tip_choice}')
     user_choice = input('Digite sua tentativa: ')
 
@@ -54,8 +54,8 @@ for c in range(len(word_choice) + 6):
             if values == user_choice:
                 lst_hit.append(keys)
         for pos in lst_hit:
-            under_choice = replacer(under_choice, user_choice, pos)
-    if under_choice == word_choice:
+            underline_choice = replacer(underline_choice, user_choice, pos)
+    if underline_choice == word_choice:
         print(f'You Win')
         break
 
